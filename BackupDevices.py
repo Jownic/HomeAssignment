@@ -5,6 +5,12 @@ import time
 from github import Github
 import schedule
 
+token = ""
+username = ""
+repo_name = ""
+file_path = ""
+
+
 def is_valid_time(time_str):
     try:
         # Attempt to parse the input as HH:MM
@@ -41,7 +47,7 @@ def Backup():
 
 def perform_backup(router_ip, username, password):
     try:
-        filename = f"{router_ip}.config"
+        filename = f"Backups/{router_ip}.config"
 
         ssh_client = paramiko.SSHClient()
         ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
