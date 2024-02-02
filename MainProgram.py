@@ -23,7 +23,7 @@ server_cert="server.crt"
 client_cert="client.crt"
 client_key="client.key"
 
-token = "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"
+token = "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"
 header = {'Authorization': f'token {token}'}
 username = "Jownic"
 repo_name = "HomeAssignment"
@@ -251,11 +251,11 @@ def get_first_and_last_commit(username, repo_name, file_path, token):
     return first_commit, last_commit
 
 def get_github_file_contents(router_ip):
-    username = "Jownic"
+    username = "JowniC"
     repository = "HomeAssignment" 
     file_path = f"Backups/{router_ip}.config"
     branch='main'
-    token = "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"
+    token = "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"
 
     raw_url = f'https://raw.githubusercontent.com/{username}/{repository}/{branch}/{file_path}'
 

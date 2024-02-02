@@ -6,7 +6,7 @@ from github import Github
 import schedule
 import threading
 
-token = "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"
+token = "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"
 gusername = "Jownic"
 repo_name = "HomeAssignment" 
 routers_to_backup = []
@@ -78,10 +78,10 @@ def upload_file_to_github(token, username, repo_name, router_ip):
         contents = repo.get_contents(file_path, ref=branch_name)
         # If the file already exists, update its content
         repo.update_file(contents.path, "Update file", file_content, contents.sha, branch=branch_name)
-
     except Exception as e:
         # If the file doesn't exist, create a new file
         repo.create_file(file_path, "Create file", file_content, branch=branch_name)
+
 
 
 def perform_backup(router_ip, username, password):
